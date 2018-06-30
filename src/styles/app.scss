@@ -1,1 +1,107 @@
+@import "../fonts/roboto-fontface.scss";
+@import "_mixins.scss";
 @import "~bootstrap/scss/bootstrap";
+body {
+    @include font-styles(regular);
+}
+
+/**
+*
+*
+ Index page SCSS 
+ *
+ */
+
+.main_page {
+    // common styles 
+    .author__name {
+        @include font-styles($font: Bold, $size:25);
+        @include media-breakpoint-up(md) {
+            @include font-styles($font: Bold, $size:35);
+        }
+    }
+    .author__acadamy {
+        @include font-styles($font: thin, $size:25);
+        @include media-breakpoint-up(md) {
+            @include font-styles($font: thin, $size:35);
+        }
+    }
+    .custom_jumbotron {
+        background: #ffd200;
+        .header_icon {
+            padding: 25px 0;
+            width: 90%;
+            margin:auto;
+            a {
+                margin: 0 15px;
+            }
+        }
+        .top__section {
+            padding: 20px 0;
+            .artist_title {
+                padding: 0 0 60px 0;
+            }
+            .content {
+                @include font-styles($font: Light, $size:12, $colour:#231f20, $lh: 26);
+                @include media-breakpoint-up(md) {
+                    width:90%;
+                    @include font-styles($font: Light, $size:14, $colour:#231f20, $lh: 26);
+                }
+                padding-bottom: 26px;
+            }
+            .read_more {
+                button {
+                    @include button(#000, #ffd200, 12);
+                    @include media-breakpoint-up(md) {
+                        @include button(#000, #ffd200, 14);
+                    }
+                }
+            }
+        }
+    }
+    .bottom__section {
+        .acadamy {
+            padding: 93px 0 40px 0;
+            width: 100%;
+            span {
+                display: block;
+                color: #fff;
+            }
+            .know_more {
+                padding-top: 30px;
+                button {
+                    @include button(#ffd200, #000, 12);
+                    @include media-breakpoint-up(md) {
+                        @include button(#ffd200, #000, 14);
+                    }
+                }
+            }
+            background: #000;
+        }
+        .agency {
+            padding: 93px 0 40px 0;
+            width: 100%;
+            span {
+                display: block;
+                color: #000;
+            }
+            .know_more {
+                padding-top: 30px;
+                button {
+                    @include button(#000, #ffd200, 12);
+                    @include media-breakpoint-up(md) {
+                        @include button(#000, #ffd200, 14);
+                    }
+                }
+            }
+            background: #FFF;
+        }
+    }
+    .footer {
+        background: #000;
+        padding: 25px 0;
+        a {
+            margin: 0 15px;
+        }
+    }
+}
